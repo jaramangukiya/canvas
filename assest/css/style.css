@@ -1,0 +1,1269 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    outline: none;
+}
+
+:root {
+    --primary: #193532;
+    --secondary: #EBF1F0;
+    --light: #203d3a;
+    --lightbg: #EBF1F0;
+    --primaryfont: 'Jost', sans-serif;
+    --secondaryfont: 'Zilla Slab', serif;
+}
+
+body {
+    font-family: var(--primaryfont);
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secondaryfont);
+}
+
+.bg-green {
+    background: linear-gradient(90deg, rgba(25, 53, 50, 1) 0%, rgba(55, 87, 84, 1) 100%);
+}
+
+.light-bg {
+    background-color: var(--lightbg);
+}
+
+.padding100 {
+    padding: 100px 0;
+}
+
+img {
+    object-fit: cover;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+ol,
+ul {
+    padding: 0;
+}
+
+/* bottom to top btn  */
+.btt {
+    z-index: 900;
+    position: fixed;
+    border-radius: 5px;
+    bottom: 2%;
+    right: 2%;
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    opacity: 0.9;
+}
+
+.btt:hover {
+    opacity: 1;
+}
+
+/* header css */
+
+header {
+    font-size: 14px;
+    color: var(--light);
+    z-index: 999;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+header a i {
+    font-size: 10px;
+}
+
+header ul li {
+    transition: all 0.5s;
+}
+
+header ul li a {
+    transition: all 0.5s;
+    line-height: 50px;
+    position: relative;
+}
+
+header ul li a::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: var(--primary);
+    bottom: 0;
+    left: 1rem;
+    transition: all 0.5s;
+}
+
+header ul li a:hover::after {
+    width: 70%;
+}
+
+header ul li ol a {
+    padding: 0;
+    line-height: 10px;
+}
+
+header ul li ol.submenu {
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    width: 200px;
+    top: 100%;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+}
+
+header ul li:hover ol.submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+header ul li ol.submenu li a {
+    display: block;
+    padding: 12px !important;
+}
+
+header ul li ol.submenu li a:hover {
+    background-color: var(--primary);
+    color: var(--lightbg) !important;
+}
+
+header ul li ol.submenu li a::after {
+    background-color: transparent;
+}
+
+/* hero section css */
+
+.hero-img {
+    height: 50vh;
+    background-image: url(../img/hero.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero-content p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--secondary);
+    opacity: 0.8;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+}
+
+.hero-content h1 span {
+    position: relative;
+}
+
+.hero-content h1 span::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/underline.svg);
+}
+
+.hero-content a {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--light);
+    transition: all 0.5s;
+}
+
+.hero-content a:hover {
+    opacity: 0.8;
+    color: var(--light);
+}
+
+.common-content {
+    color: var(--primary);
+}
+
+.common-content h2 {
+    font-size: 56px;
+}
+
+/* choose section css */
+
+.choose-content {
+    color: var(--primary);
+}
+
+.choose-content i {
+    font-size: 56px;
+}
+
+.choose-img img {
+    opacity: 0.5;
+    padding: 20px;
+    object-fit: cover;
+}
+
+.Category .Category-img-box {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    transition: all 0.5s;
+}
+
+.Category .Category-img-box:hover {
+    opacity: 0.9;
+}
+
+.Category .Category-sofa {
+    background-image: url(../img/sofas.jpg);
+    background-size: cover;
+}
+
+.Category .Category-table {
+    background-image: url(../img/tables.jpg);
+    background-size: cover;
+}
+
+.Category .Category-chair {
+    background-image: url(../img/chairs.jpg);
+    background-size: cover;
+}
+
+.Category .Category-beds {
+    background-image: url(../img/beds.jpg);
+    background-size: cover;
+}
+
+.Category .Category-wardors {
+    background-image: url(../img/wardrobes.jpg);
+    background-size: cover;
+}
+
+.Category .Category-light {
+    background-image: url(../img/lights.jpg);
+    background-size: cover;
+}
+
+.Category h5 {
+    background-color: white;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* arrivals section css */
+.arrivals {
+    color: var(--primary);
+}
+
+.arrivals-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    transition: all 0.5s;
+}
+
+.arrivals-btn:hover {
+    background-color: var(--primary);
+    color: var(--secondary)
+}
+
+.arrivals h2 {
+    font-size: 44px;
+}
+
+.arrivals-img-box {
+    height: 400px;
+}
+
+.arrivals-img-box:hover .frist-icon::after,
+.arrivals-img-box:hover .second-icon::after {
+    opacity: 1;
+}
+
+.arrivals-icon .frist-icon::after,
+.arrivals-icon .second-icon::after {
+    position: absolute;
+    content: "\f217";
+    font-family: "Font Awesome 6 free";
+    background-color: var(--lightbg);
+    bottom: 0;
+    border-radius: 5px;
+    font-weight: 900;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    padding: 0 8px;
+    margin: 10px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.arrivals-icon .second-icon::after {
+    right: 0;
+    content: "\f066";
+    padding: 0 12px;
+}
+
+.arrivals-1 {
+    background-image: url(../img/2-1.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-1:hover {
+    background-image: url(../img/2.jpg);
+    background-size: cover;
+}
+
+.arrivals-2 {
+    background-image: url(../img/3.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-2:hover {
+    background-image: url(../img/3-1.jpg);
+    background-size: cover;
+}
+
+.arrivals-3 {
+    background-image: url(../img/4.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-3:hover {
+    background-image: url(../img/4-1.jpg);
+    background-size: cover;
+}
+
+.arrivals-4 {
+    background-image: url(../img/5.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-4:hover {
+    background-image: url(../img/5-1.jpg);
+    background-size: cover;
+}
+
+.arrivals-5 {
+    background-image: url(../img/6.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-5:hover {
+    background-image: url(../img/6-1.jpg);
+    background-size: cover;
+}
+
+.arrivals-6 {
+    background-image: url(../img/7.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-6:hover {
+    background-image: url(../img/7-1.jpg);
+    background-size: cover;
+}
+
+.arrivals-7 {
+    background-image: url(../img/8.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.arrivals-7:hover {
+    background-image: url(../img/8-1.jpg);
+    background-size: cover;
+}
+
+/* explore section css */
+
+.explore-img {
+    background-image: url(../img/section.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.explore .common-content h2 {
+    font-size: 40px;
+}
+
+.explore-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.explore-btn:hover {
+    background-color: var(--primary);
+    color: var(--secondary)
+}
+
+/* rating section css */
+.bg-skin {
+    background-color: #fdf3e7;
+}
+
+.rating {
+    color: var(--primary);
+}
+
+.rating-icon i {
+    font-size: 50px;
+}
+
+.rating-conent h3 {
+    font-size: 24px;
+}
+
+/* instagram section css */
+.insta i {
+    font-size: 60px;
+}
+
+.black-ovarlay {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.insta-img-box:hover .black-ovarlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.insta-icon {
+    opacity: 0;
+}
+
+.insta-img-box:hover .insta-icon {
+    opacity: 0.5;
+}
+
+.insta h3 {
+    font-size: 32px;
+}
+
+.order-css-1 {
+    order: 1;
+}
+
+.order-css-2 {
+    order: 2;
+}
+
+.order-css-3 {
+    order: 3;
+}
+
+.insta-btn {
+    border: 1px solid var(--lightbg);
+}
+
+.insta-btn:hover {
+    background-color: var(--lightbg);
+    color: var(--primary) !important;
+}
+
+.insta-img-box {
+    height: 150px;
+    width: 100%;
+}
+
+.insta-img-1-1 {
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-1-2 {
+    background-image: url(../img/insta2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-1-3 {
+    background-image: url(../img/insta3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-1-4 {
+    background-image: url(../img/intsa4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-2-1 {
+    background-image: url(../img/insta5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-2-2 {
+    background-image: url(../img/insta6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-2-3 {
+    background-image: url(../img/insta7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta-img-2-4 {
+    background-image: url(../img/insta8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* contact section css  */
+.contact {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 1;
+    position: relative;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.contact li {
+    padding: 8px;
+}
+
+.contact p {
+    font-weight: 400;
+}
+
+.contact input {
+    background-color: var(--lightbg);
+}
+
+.contact-input {
+    border-radius: 5px 0 0 5px;
+}
+
+.contact-btn {
+    background-color: var(--primary);
+    border-radius: 0 5px 5px 0;
+    color: var(--lightbg);
+    transition: all 0.5s;
+    font-weight: 400;
+}
+
+/* footer css */
+.footer-link ul li {
+    border-bottom: var(--primary) dotted 1px;
+}
+
+footer {
+
+    z-index: 1;
+    position: relative;
+}
+
+/* contact html page */
+.contact-map h2 {
+    font-size: 40px;
+    color: white;
+}
+
+.contact-map-content h4 {
+    font-size: 20px;
+}
+
+.contact-map-content p {
+    line-height: 30px;
+    font-weight: 500;
+}
+
+/* get in touch section css */
+.getintouch h4 {
+    font-size: 20px;
+}
+
+.getintouch p {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* home  html page css */
+.black-gradiant {
+    background: linear-gradient(0deg, rgba(8, 8, 8, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 88;
+}
+
+.blur {
+    backdrop-filter: blur(5px);
+}
+
+/* about page css  */
+
+.about-bg {
+    background-image: url(../img/hero.jpg);
+    padding-bottom: 700px;
+    padding-top: 150px;
+}
+
+.about-bg h1 {
+    font-size: 56px;
+}
+
+/* contact  pade css  */
+.form-section .arrivals-btn {
+    border-radius: 5px;
+}
+
+.border-green {
+    border: 1px solid var(--light);
+}
+
+/* listing page css  */
+.fixed-section {
+    z-index: 1;
+    width: 100%;
+    top: 75px;
+    height: auto;
+}
+
+.sofa,
+.chairs,
+.tables,
+.wardores,
+.beds {
+    display: none;
+}
+
+.sofa-1 {
+    background-image: url(../img/sofa/1.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-1:hover {
+    background-image: url(../img/sofa/2.jpg);
+    background-size: cover;
+}
+
+.sofa-2 {
+    background-image: url(../img/sofa/3.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-2:hover {
+    background-image: url(../img/sofa/4.jpg);
+    background-size: cover;
+}
+
+.sofa-3 {
+    background-image: url(../img/sofa/5.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-3:hover {
+    background-image: url(../img/sofa/6.jpg);
+    background-size: cover;
+}
+
+.sofa-4 {
+    background-image: url(../img/sofa/7.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-4:hover {
+    background-image: url(../img/sofa/8.jpg);
+    background-size: cover;
+}
+
+.sofa-5 {
+    background-image: url(../img/sofa/10.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-5:hover {
+    background-image: url(../img/sofa/9.jpg);
+    background-size: cover;
+}
+
+.sofa-6 {
+    background-image: url(../img/sofa/11.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-6:hover {
+    background-image: url(../img/sofa/12.jpg);
+    background-size: cover;
+}
+
+.sofa-7 {
+    background-image: url(../img/sofa/13.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-7:hover {
+    background-image: url(../img/sofa/14.jpg);
+    background-size: cover;
+}
+
+.sofa-8 {
+    background-image: url(../img/sofa/15.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-8:hover {
+    background-image: url(../img/sofa/16.jpg);
+    background-size: cover;
+}
+
+.sofa-9 {
+    background-image: url(../img/sofa/17.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-9:hover {
+    background-image: url(../img/sofa/18.jpg);
+    background-size: cover;
+}
+
+.sofa-10 {
+    background-image: url(../img/sofa/19.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.sofa-10:hover {
+    background-image: url(../img/sofa/20.jpg);
+    background-size: cover;
+}
+
+.chairs-1 {
+    background-image: url(../img/chairs/1.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-1:hover {
+    background-image: url(../img/chairs/2.jpg);
+    background-size: cover;
+}
+
+.chairs-2 {
+    background-image: url(../img/chairs/3.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-2:hover {
+    background-image: url(../img/chairs/4.jpg);
+    background-size: cover;
+}
+
+.chairs-3 {
+    background-image: url(../img/chairs/5.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-3:hover {
+    background-image: url(../img/chairs/6.jpg);
+    background-size: cover;
+}
+
+.chairs-4 {
+    background-image: url(../img/chairs/7.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-4:hover {
+    background-image: url(../img/chairs/8.jpg);
+    background-size: cover;
+}
+
+.chairs-5 {
+    background-image: url(../img/chairs/9.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-5:hover {
+    background-image: url(../img/chairs/10.jpg);
+    background-size: cover;
+}
+
+.chairs-6 {
+    background-image: url(../img/chairs/11.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-6:hover {
+    background-image: url(../img/chairs/12.jpg);
+    background-size: cover;
+}
+
+.chairs-7 {
+    background-image: url(../img/chairs/13.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-7:hover {
+    background-image: url(../img/chairs/14.jpg);
+    background-size: cover;
+}
+
+.chairs-8 {
+    background-image: url(../img/chairs/15.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-8:hover {
+    background-image: url(../img/chairs/16.jpg);
+    background-size: cover;
+}
+
+.chairs-9 {
+    background-image: url(../img/chairs/17.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-9:hover {
+    background-image: url(../img/chairs/18.jpg);
+    background-size: cover;
+}
+
+.chairs-10 {
+    background-image: url(../img/chairs/19.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.chairs-10:hover {
+    background-image: url(../img/chairs/20.jpg);
+    background-size: cover;
+}
+
+.beds-1 {
+    background-image: url(../img/beds/1.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-1:hover {
+    background-image: url(../img/beds/2.jpg);
+    background-size: cover;
+}
+
+.beds-2 {
+    background-image: url(../img/beds/3.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-2:hover {
+    background-image: url(../img/beds/4.jpg);
+    background-size: cover;
+}
+
+.beds-3 {
+    background-image: url(../img/beds/5.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-3:hover {
+    background-image: url(../img/beds/6.jpg);
+    background-size: cover;
+}
+
+.beds-4 {
+    background-image: url(../img/beds/7.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-4:hover {
+    background-image: url(../img/beds/8.jpg);
+    background-size: cover;
+}
+
+.beds-5 {
+    background-image: url(../img/beds/9.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-5:hover {
+    background-image: url(../img/beds/10.jpg);
+    background-size: cover;
+}
+
+.beds-6 {
+    background-image: url(../img/beds/11.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-6:hover {
+    background-image: url(../img/beds/12.jpg);
+    background-size: cover;
+}
+
+.beds-7 {
+    background-image: url(../img/beds/13.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-7:hover {
+    background-image: url(../img/beds/14.jpg);
+    background-size: cover;
+}
+
+.beds-8 {
+    background-image: url(../img/beds/15.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-8:hover {
+    background-image: url(../img/beds/16.jpg);
+    background-size: cover;
+}
+
+.beds-9 {
+    background-image: url(../img/beds/17.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-9:hover {
+    background-image: url(../img/beds/18.jpg);
+    background-size: cover;
+}
+
+.beds-10 {
+    background-image: url(../img/beds/19.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.beds-10:hover {
+    background-image: url(../img/beds/20.jpg);
+    background-size: cover;
+}
+
+.wardores-1 {
+    background-image: url(../img/wardores/6.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-1:hover {
+    background-image: url(../img/wardores/2.jpg);
+    background-size: cover;
+}
+
+.wardores-2 {
+    background-image: url(../img/wardores/3.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-2:hover {
+    background-image: url(../img/wardores/4.jpg);
+    background-size: cover;
+}
+
+.wardores-3 {
+    background-image: url(../img/wardores/5.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-3:hover {
+    background-image: url(../img/wardores/1.jpg);
+    background-size: cover;
+}
+
+.wardores-4 {
+    background-image: url(../img/wardores/7.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-4:hover {
+    background-image: url(../img/wardores/8.jpg);
+    background-size: cover;
+}
+
+.wardores-5 {
+    background-image: url(../img/wardores/9.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-5:hover {
+    background-image: url(../img/wardores/10.jpg);
+    background-size: cover;
+}
+
+.wardores-6 {
+    background-image: url(../img/wardores/11.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-6:hover {
+    background-image: url(../img/wardores/12.jpg);
+    background-size: cover;
+}
+
+.wardores-7 {
+    background-image: url(../img/wardores/14.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-7:hover {
+    background-image: url(../img/wardores/13.jpg);
+    background-size: cover;
+}
+
+.wardores-8 {
+    background-image: url(../img/wardores/15.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-8:hover {
+    background-image: url(../img/wardores/16.jpg);
+    background-size: cover;
+}
+
+.wardores-9 {
+    background-image: url(../img/wardores/17.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-9:hover {
+    background-image: url(../img/wardores/18.jpg);
+    background-size: cover;
+}
+
+.wardores-10 {
+    background-image: url(../img/wardores/20.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.wardores-10:hover {
+    background-image: url(../img/wardores/19.jpg);
+    background-size: cover;
+}
+
+.tables-1 {
+    background-image: url(../img/tables/1.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-1:hover {
+    background-image: url(../img/tables/2.jpg);
+    background-size: cover;
+}
+
+.tables-2 {
+    background-image: url(../img/tables/3.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-2:hover {
+    background-image: url(../img/tables/4.jpg);
+    background-size: cover;
+}
+
+.tables-3 {
+    background-image: url(../img/tables/5.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-3:hover {
+    background-image: url(../img/tables/6.jpg);
+    background-size: cover;
+}
+
+.tables-4 {
+    background-image: url(../img/tables/7.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-4:hover {
+    background-image: url(../img/tables/8.jpg);
+    background-size: cover;
+}
+
+.tables-5 {
+    background-image: url(../img/tables/9.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-5:hover {
+    background-image: url(../img/tables/10.jpg);
+    background-size: cover;
+}
+
+.tables-6 {
+    background-image: url(../img/tables/11.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-6:hover {
+    background-image: url(../img/tables/12.jpg);
+    background-size: cover;
+}
+
+.tables-7 {
+    background-image: url(../img/tables/13.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-7:hover {
+    background-image: url(../img/tables/14.jpg);
+    background-size: cover;
+}
+
+.tables-8 {
+    background-image: url(../img/tables/15.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-8:hover {
+    background-image: url(../img/tables/16.jpg);
+    background-size: cover;
+}
+
+.tables-9 {
+    background-image: url(../img/tables/17.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-9:hover {
+    background-image: url(../img/tables/18.jpg);
+    background-size: cover;
+}
+
+.tables-10 {
+    background-image: url(../img/tables/19.jpg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.tables-10:hover {
+    background-image: url(../img/tables/20.jpg);
+    background-size: cover;
+}
+
+.fixed-section li a i {
+    font-size: 12px;
+    padding-left: 5px;
+    transition: all 0.5s;
+}
+
+.fixed-section li a:hover {
+    font-size: 20px;
+}
+
+.fixed-section li a:hover i {
+    padding-left: 15px;
+}
+
+.fixed-section li a {
+    transition: all 0.5s;
+}
+
+.error-msg {
+    color: rgb(211, 41, 41);
+}
+.flex
+{
+    display: flex;
+}
+.border-radius
+{
+    /* border-radius: 5px; */
+}
+.item .arrivals-icon  .frist-icon::after
+{
+    bottom:10px;
+    opacity: 1;
+    right: 0;
+    background-color: var(--light);
+    color: var(--lightbg);
+    margin-right: 0;
+}
+.item
+{
+    position: relative;
+}

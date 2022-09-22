@@ -1,0 +1,17 @@
+@media (max-wdith:991px) {
+    .bg-green .padding100
+{
+    padding: 0;
+}
+   
+}
+@media (max-width:991px) {
+    .order-css-1
+    {
+        order: 2;
+    }
+    .order-css-2
+    {
+        order: 1;
+    }
+}
